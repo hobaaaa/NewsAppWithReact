@@ -1,5 +1,6 @@
 .news_item {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     padding: 10px;
     margin: 1%;
@@ -10,11 +11,19 @@
 }
 
 .image {
-    width: 100px;
     height: auto;
-    margin-left: 15px;
+    margin: 0 20px 0 15px;
+    max-width: 300px;
 }
 
 .content {
     flex: 1;
+    flex-basis: 300px;
+}
+
+@media (max-width: 680px) {
+    .content {
+        margin-top: 15px;
+        margin-left: 15px;
+    }
 }

@@ -1,22 +1,24 @@
 import styles from "../styles/News.module.css";
 import Image from "next/image";
 
-export default function NewsItem({
-  title,
-  content,
-}: {
+interface NewsItemProps {
   title: string;
   content: string;
-}) {
+  imageUrl?: string; // imageUrl opsiyonel
+}
+
+export default function NewsItem({ title, content, imageUrl }: NewsItemProps) {
   return (
     <div className={styles.news_item}>
-      <Image
-        className={styles.image}
-        src="https://picsum.photos/200"
-        width={200}
-        height={200}
-        alt="Haber Resmi"
-      />
+      {imageUrl && (
+        <Image
+          className={styles.image}
+          src={imageUrl}
+          width={300}
+          height={200}
+          alt="Haber Resmi"
+        />
+      )}
       <div className={styles.content}>
         <h2>{title}</h2>
         <p>{content}</p>

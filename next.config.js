@@ -1,12 +1,47 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "picsum.photos",
-        port: "",
-        pathname: "/**",
-      },
+    domains: [
+      "media.cnn.com",
+      "kubrick.htvapps.com",
+      "fox8.com",
+      "www.politico.eu",
+      "i.ytimg.com",
+      "www.washingtonpost.com",
+      "www.cnet.com",
+      "assets3.cbsnewsstatic.com",
+      "cdn.arstechnica.net",
+      "imageio.forbes.com",
+      "media.zenfs.com",
+      "www.freep.com",
+      "static.foxnews.com",
+      "www.usatoday.com",
+      "nbcsports.brightspotcdn.com",
+      "www.sportico.com",
+      "sportshub.cbsistatic.com",
+      "nypost.com",
+      "www.youtube.com",
+      "www.ncaa.org",
+      "media.nbcsportsphiladelphia.com",
+      "a2.espncdn.com",
+      "cdn-4.motorsport.com",
+      "cdn.vox-cdn.com",
+      "s.yimg.com",
+      "media.formula1.com",
+      "static.clubs.nfl.com",
+      "images2.minutemediacdn.com",
+      "s.hdnux.com",
+      "ichef.bbci.co.uk",
+      "a57.foxnews.com",
+      "dims.apnews.com",
+      "local12.com",
+      "i.insider.com",
+      "gray-wtvg-prod.cdn.arcpublishing.com",
+      "d.newsweek.com",
+      "cdn.motor1.com",
+      "cdn.onemileatatime.com",
     ],
   },
 };
+
+module.exports = nextConfig;

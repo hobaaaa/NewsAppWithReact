@@ -1,11 +1,11 @@
-import NewsItem from "./components/NewsItem";
-import styles from "./styles/Home.module.css";
+import NewsItem from "../components/NewsItem";
+import styles from "../styles/Home.module.css";
 
 async function getData() {
   try {
     const apiKey = process.env.NEXT_PUBLIC_NEWS_API_KEY;
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
+      `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`
     );
     if (!res.ok) {
       throw new Error("Veri çekme başarısız oldu.");
@@ -21,7 +21,7 @@ async function getData() {
   }
 }
 
-export default async function Page() {
+export default async function Business() {
   const data = await getData();
   const articles = data.articles || []; // articles boşsa boş dizi
 

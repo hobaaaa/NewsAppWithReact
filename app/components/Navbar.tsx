@@ -20,8 +20,8 @@ const Navbar = () => {
     },
     {
       id: 3,
-      link: "economy",
-      title: "Economy",
+      link: "business",
+      title: "Business",
     },
   ];
 
